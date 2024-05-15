@@ -14,10 +14,9 @@ Swagger API:```localhost:3000/api```
 
 ## Missing
 1. Frontend app
-2. e2e tests
-3. env variables for secrets
-4. CI/CD
-5. authentication
+2. env variables for secrets
+3. CD
+4. authentication
 
 
 ## License
