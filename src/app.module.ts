@@ -6,11 +6,11 @@ import { NoteModule } from './modules/note/note.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'postgres',
-      port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'secret_notes',
+      host: process.env.POSTGRES_HOST || 'postgres',
+      port: parseInt(process.env.POSTGRES_PORT) || 5432,
+      username: process.env.POSTGRES_USERNAME || 'postgres',
+      password: process.env.POSTGRES_PASSWORD || 'postgres',
+      database: process.env.POSTGRES_DATABASE || 'secret_notes',
       autoLoadEntities: true,
       synchronize: true,
     }),
